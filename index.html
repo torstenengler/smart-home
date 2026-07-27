@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home für Einsteiger — Dein einfacher Start</title>
+    <meta name="description" content="Smart Home für Einsteiger: Die besten Geräte, ehrliche Tests und Schritt-für-Schritt-Anleitungen für Apple HomeKit, Alexa und Google Home.">
+    <style>
+        :root {
+            --bg: #0f1115;
+            --surface: #1a1e25;
+            --border: #2a2f3a;
+            --text: #e8eaed;
+            --muted: #9aa0a6;
+            --accent: #4f8cff;
+            --accent-2: #a78bfa;
+            --success: #4ade80;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.75rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--muted);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: #3b4252;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.65rem 1.25rem;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: opacity 0.15s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.85;
+        }
+
+        .disclaimer {
+            background: #1c1410;
+            border: 1px solid #3b2a1f;
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            color: #d4a373;
+            font-size: 0.85rem;
+            margin-top: 2rem;
+        }
+
+        .disclaimer strong {
+            color: #f4a261;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            color: var(--muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            background: #1e293b;
+            color: #94a3b8;
+            margin-right: 0.4rem;
+        }
+
+        .amazon-box {
+            background: #0f172a;
+            border: 1px solid #1e3a5f;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .amazon-box .price-note {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+        }
+
+        .amazon-box .btn {
+            background: #ff9900;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .amazon-box .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smart Home für Einsteiger</h1>
+        <p class="subtitle">
+            Ehrliche Tests, einfache Anleitungen und die besten Geräte — ohne Fachchinesisch.
+        </p>
+    </header>
+
+    <main>
+        <section id="echo">
+            <h2>#1 Amazon Echo Dot — Die einfachste Sprachsteuerung</h2>
+            <div class="card">
+                <h3>Echo Dot (5. Generation) Test</h3>
+                <p>
+                    Der Echo Dot ist für viele der perfekte Einstieg: Amazon-Alexa-Sprachsteuerung,
+                    kompakt, und ab sofort mit Matter-Unterstützung. Ideal, um Lampen, Steckdosen
+                    und Musik per Sprache zu steuern.
+                </p>
+                <p>Besonders gut für Einsteiger: <strong>Alexa-App ist intuitiv, Skills reichlich vorhanden</strong> — und das Gerät ist oft unter 30 € zu haben.</p>
+
+                <div class="amazon-box">
+                    <p class="price-note">Aktueller Preis bei Amazon — Angebot prüfen:</p>
+                    <a class="btn" href="https://www.amazon.de/echo-dot-2022/dp/B09B8X9RGM?crid=3EQJJ5SJEQI0J&dib=eyJ2IjoiMSJ9.axLJupR_-uZQf4HesYGqhZ0DnuloTQT5khvoB1tEcHYJgE7xdeEGd7gINUt0vF1xLGafcVSKOmm6OexWOcHKJfiCmBUAu21dvw1MqHT-7mNOzzezkdHM5p0KQycCLNiWjahJi2FIs-V6sIdoQ6bnJIyAMUEGZRaBT58pdKObMpLCfa-4DfkgiFH9FQmLNK41AgsXehDJjEr4j5-FXiXLNX6OYh3owAxjP6P-nRr1kOhUdoQ5t0AUu7xrjdAJlKjjYlw-uNeFqnPdSx6XBHEc2AZZupA9gkQcVYR4nTYC2zk.9lkSzY6fNZdmDo0eMz7p-6feW3koE0QfsIyEbTDO5jQ&dib_tag=se&keywords=echo%2Bdot&qid=1785150887&s=amazon-devices&sprefix=echo%2Camazon-devices%2C178&sr=1-1&ufe=app_do%3Aamzn1.fos.f05e13d8-36dc-49a3-89e6-b203c5c649db&th=1&linkCode=ll2&tag=mrtbuildsmrt-21&linkId=4c676cda91bd7282520a9dae85de5a17&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">Echo Dot (Newest Gen) bei Amazon ansehen</a>
+                    <p style="font-size:0.75rem;color:#64748b;margin-top:0.5rem;">€29,99 · Neu · Farbe: Anthrazit · Beliebtester smarter Lautsprecher</p>
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    <span class="pill">Amazon Affiliate</span>
+                    <span class="pill">Testsieger Einsteiger</span>
+                    <span class="pill">Matter</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="steckdosen">
+            <h2>#2 Smarte Steckdosen — Geringes Risiko, großer Nutzen</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Kasa Smart Plug Mini</h3>
+                    <p>Verbrauchsanzeige, kompakt, kein Hub nötig. Funktioniert zuverlässig mit Alexa und Google Home.</p>
+                    <span class="pill">Kasa</span>
+                    <span class="pill">kein Hub</span>
+                </div>
+                <div class="card">
+                    <h3>Tapo P110</h3>
+                    <p>Tapo-App ist für Einsteiger oft einfacher als Kasa; Matter‑taugliche Modelle in Vorbereitung.</p>
+                    <span class="pill">Tapo</span>
+                    <span class="pill">Matter</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="licht">
+            <h2>#3 Licht — Das sichtbarste Smart-Home-Upgrade</h2>
+            <div class="card">
+                <h3>Philips Hue Starter Kit (Bridge + 2–4 Bulbs)</h3>
+                <p>
+                    Hue ist das Synonym für smartes Licht. Die Bridge macht das System stabil,
+                    und mit Apple HomeKit, Alexa, Google und SmartThings ist die Kompatibilität
+                    unschlagen. Meine Empfehlung: erst Bridge + 2 White-Bulbs kaufen, dann ausbauen.
+                </p>
+                <div style="margin-top: 1rem;">
+                    <span class="pill">Hue</span>
+                    <span class="pill">Bridge</span>
+                    <span class="pill">Apple HomeKit</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="kurs">
+            <h2>Einstiegskurs Smart Home</h2>
+            <div class="card">
+                <h3>Vom Kauf zur fertigen Smart-Home-Steuerung</h3>
+                <p>
+                    Ich baue derzeit einen praxisnahen Einstiegskurs für Smart-Home-Einsteiger auf —
+                    inklusive Produktauswahl, Router-Einstellungen und Sicherheitschecks.
+                    Trag dich hier ein, um informiert zu werden.
+                </p>
+                <p style="margin-top: 0.75rem;">
+                    <a href="#" class="btn btn-primary" onclick="alert('Coming soon!')">Kurs-Updates erhalten</a>
+                </p>
+                <span class="pill">Digistore24</span>
+                <span class="pill">E-Book + Video</span>
+            </div>
+        </section>
+
+        <div class="disclaimer">
+            <strong>Hinweis:</strong> Einige Links auf dieser Seite sind Affiliate-Links.
+            Wenn du darüber kaufst, erhalte ich eine kleine Provision — ohne Mehrkosten für dich.
+            Das hilft mir, ehrliche Tests zu finanzieren. Meine Bewertungen bleiben davon unabhängig.
+        </div>
+    </main>
+
+    <footer>
+        <p>Smart Home für Einsteiger · Autonome Demo · Bis zur echten Monetarisierung</p>
+    </footer>
+</body>
+</html>
