@@ -1,279 +1,139 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home für Einsteiger — Dein einfacher Start</title>
-    <meta name="description" content="Smart Home für Einsteiger: Die besten Geräte, ehrliche Tests und Schritt-für-Schritt-Anleitungen für Apple HomeKit, Alexa und Google Home.">
-    <style>
-        :root {
-            --bg: #0f1115;
-            --surface: #1a1e25;
-            --border: #2a2f3a;
-            --text: #e8eaed;
-            --muted: #9aa0a6;
-            --accent: #4f8cff;
-            --accent-2: #a78bfa;
-            --success: #4ade80;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border-bottom: 1px solid var(--border);
-            padding: 3rem 1rem;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 2.4rem;
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.75rem;
-        }
-
-        .subtitle {
-            font-size: 1.15rem;
-            color: var(--muted);
-            max-width: 680px;
-            margin: 0 auto;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2.5rem 1rem;
-        }
-
-        section {
-            margin-bottom: 3rem;
-        }
-
-        h2 {
-            font-size: 1.7rem;
-            margin-bottom: 1.25rem;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 1.75rem;
-            margin-bottom: 1.5rem;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-2px);
-            border-color: #3b4252;
-        }
-
-        .card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--text);
-        }
-
-        .card p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.65rem 1.25rem;
-            border-radius: 9px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: opacity 0.15s ease;
-            border: none;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            opacity: 0.85;
-        }
-
-        .disclaimer {
-            background: #1c1410;
-            border: 1px solid #3b2a1f;
-            border-radius: 10px;
-            padding: 1rem 1.25rem;
-            color: #d4a373;
-            font-size: 0.85rem;
-            margin-top: 2rem;
-        }
-
-        .disclaimer strong {
-            color: #f4a261;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem 1rem;
-            color: var(--muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .pill {
-            display: inline-block;
-            padding: 0.25rem 0.6rem;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            background: #1e293b;
-            color: #94a3b8;
-            margin-right: 0.4rem;
-        }
-
-        .amazon-box {
-            background: #0f172a;
-            border: 1px solid #1e3a5f;
-            border-radius: 12px;
-            padding: 1.25rem;
-            margin-top: 1rem;
-        }
-
-        .amazon-box .price-note {
-            font-size: 0.85rem;
-            color: #94a3b8;
-            margin-bottom: 0.5rem;
-        }
-
-        .amazon-box .btn {
-            background: #ff9900;
-            color: #000;
-            font-weight: 600;
-        }
-
-        .amazon-box .btn:hover {
-            opacity: 0.9;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Home für Einsteiger — mr_t_builds</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #f7f9fb; color: #1f2937; line-height: 1.6; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 2rem 1.25rem; }
+  header { text-align: center; padding: 2rem 0 1.5rem; }
+  header h1 { font-size: 2rem; margin-bottom: .5rem; }
+  header p { color: #6b7280; max-width: 640px; margin: 0 auto; }
+  .badge { display: inline-block; background: #dbeafe; color: #1e40af; padding: .25rem .6rem; border-radius: 999px; font-size: .80rem; font-weight: 600; margin-bottom: .75rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2.5rem; }
+  .card { background: #fff; border: 1px solid #e5e7eb; border-radius: .75rem; overflow: hidden; display: flex; flex-direction: column; transition: transform .15s ease, box-shadow .15s ease; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(17,24,39,.08); }
+  .card-body { padding: 1.1rem; flex: 1; display: flex; flex-direction: column; }
+  .tag { display: inline-block; background: #f3f4f6; color: #374151; padding: .2rem .5rem; border-radius: .35rem; font-size: .72rem; font-weight: 600; margin-bottom: .5rem; width: max-content; }
+  .tag.amazon { background: #dbeafe; color: #1e40af; }
+  .tag.digital { background: #fef3c7; color: #92400e; }
+  .card h3 { font-size: 1.05rem; margin-bottom: .35rem; }
+  .card p { font-size: .92rem; color: #4b5563; margin-bottom: .8rem; flex: 1; }
+  .price { font-weight: 700; color: #065f46; margin-bottom: .6rem; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; background: #2563eb; color: #fff; border: none; padding: .65rem 1rem; border-radius: .5rem; font-weight: 600; text-decoration: none; font-size: .92rem; }
+  .btn-secondary { background: #111827; }
+  .notice { background: #fff7ed; border: 1px solid #fde68a; color: #92400e; padding: .75rem 1rem; border-radius: .5rem; font-size: .88rem; margin-bottom: 1.25rem; }
+  footer { text-align: center; color: #9ca3af; font-size: .85rem; padding: 1.25rem 0 2.5rem; }
+  a { color: inherit; }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Smart Home für Einsteiger</h1>
-        <p class="subtitle">
-            Ehrliche Tests, einfache Anleitungen und die besten Geräte — ohne Fachchinesisch.
-        </p>
-    </header>
+<div class="wrap">
+  <header>
+    <span class="badge">DIY · Smart Home · Reichweite aufbauen</span>
+    <h1>mr_t_builds — Empfehlungen für dein Smart Home</h1>
+    <p>Getestet, praxistauglich und bezahlbar: die Produkte, mit denen ich selbst arbeite. Einige Links sind Affiliate-Links — ohne Mehrkosten für dich.</p>
+  </header>
 
-    <main>
-        <section id="echo">
-            <h2>#1 Amazon Echo Dot — Die einfachste Sprachsteuerung</h2>
-            <div class="card">
-                <h3>Echo Dot (5. Generation) Test</h3>
-                <p>
-                    Der Echo Dot ist für viele der perfekte Einstieg: Amazon-Alexa-Sprachsteuerung,
-                    kompakt, und ab sofort mit Matter-Unterstützung. Ideal, um Lampen, Steckdosen
-                    und Musik per Sprache zu steuern.
-                </p>
-                <p>Besonders gut für Einsteiger: <strong>Alexa-App ist intuitiv, Skills reichlich vorhanden</strong> — und das Gerät ist oft unter 30 € zu haben.</p>
+  <div class="notice">ℹ️ Hinweis: Preise und Verfügbarkeit können sich täglich ändern. Stand der Empfehlungen: Juli 2026.</div>
 
-                <div class="amazon-box">
-                    <p class="price-note">Aktueller Preis bei Amazon — Angebot prüfen:</p>
-                    <a class="btn" href="https://www.amazon.de/echo-dot-2022/dp/B09B8X9RGM?crid=3EQJJ5SJEQI0J&dib=eyJ2IjoiMSJ9.axLJupR_-uZQf4HesYGqhZ0DnuloTQT5khvoB1tEcHYJgE7xdeEGd7gINUt0vF1xLGafcVSKOmm6OexWOcHKJfiCmBUAu21dvw1MqHT-7mNOzzezkdHM5p0KQycCLNiWjahJi2FIs-V6sIdoQ6bnJIyAMUEGZRaBT58pdKObMpLCfa-4DfkgiFH9FQmLNK41AgsXehDJjEr4j5-FXiXLNX6OYh3owAxjP6P-nRr1kOhUdoQ5t0AUu7xrjdAJlKjjYlw-uNeFqnPdSx6XBHEc2AZZupA9gkQcVYR4nTYC2zk.9lkSzY6fNZdmDo0eMz7p-6feW3koE0QfsIyEbTDO5jQ&dib_tag=se&keywords=echo%2Bdot&qid=1785150887&s=amazon-devices&sprefix=echo%2Camazon-devices%2C178&sr=1-1&ufe=app_do%3Aamzn1.fos.f05e13d8-36dc-49a3-89e6-b203c5c649db&th=1&linkCode=ll2&tag=mrtbuildsmrt-21&linkId=4c676cda91bd7282520a9dae85de5a17&ref_=as_li_ss_tl" target="_blank" rel="nofollow sponsored noopener">Echo Dot (Newest Gen) bei Amazon ansehen</a>
-                    <p style="font-size:0.75rem;color:#64748b;margin-top:0.5rem;">€29,99 · Neu · Farbe: Anthrazit · Beliebtester smarter Lautsprecher</p>
-                </div>
+  <div class="grid">
+    <article class="card">
+      <div class="card-body">
+        <span class="tag amazon">Amazon</span>
+        <h3>Echo Dot 5. Generation</h3>
+        <p>Perfekter Einstieg in die Sprachsteuerung. Mit Matter, Alexa und kompaktem Design — direkt an deinem Smart Home beteiligen.</p>
+        <div class="price">ab ca. 29,99 €</div>
+        <a class="btn" href="https://www.amazon.de/dp/B09B8X9RGM?tag=mrtbuildsmrt-21" target="_blank" rel="noopener">Bei Amazon ansehen</a>
+      </div>
+    </article>
 
-                <div style="margin-top: 1rem;">
-                    <span class="pill">Amazon Affiliate</span>
-                    <span class="pill">Testsieger Einsteiger</span>
-                    <span class="pill">Matter</span>
-                </div>
-            </div>
-        </section>
+    <article class="card">
+      <div class="card-body">
+        <span class="tag amazon">Amazon</span>
+        <h3>Tapo P110 Smart Plug</h3>
+        <p>Kompakte WLAN-Steckdose mit Verbrauchsanzeige. Ideal für Lampen, Geräte und erste Automatisierungen — kein Hub nötig.</p>
+        <div class="price">ab ca. 14,99 €</div>
+        <a class="btn" href="https://www.amazon.de/s?k=tapo+p110&tag=mrtbuildsmrt-21" target="_blank" rel="noopener">Bei Amazon ansehen</a>
+      </div>
+    </article>
 
-        <section id="steckdosen">
-            <h2>#2 Smarte Steckdosen — Geringes Risiko, großer Nutzen</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Kasa Smart Plug Mini</h3>
-                    <p>Verbrauchsanzeige, kompakt, kein Hub nötig. Funktioniert zuverlässig mit Alexa und Google Home.</p>
-                    <span class="pill">Kasa</span>
-                    <span class="pill">kein Hub</span>
-                </div>
-                <div class="card">
-                    <h3>Tapo P110</h3>
-                    <p>Tapo-App ist für Einsteiger oft einfacher als Kasa; Matter‑taugliche Modelle in Vorbereitung.</p>
-                    <span class="pill">Tapo</span>
-                    <span class="pill">Matter</span>
-                </div>
-            </div>
-        </section>
+    <article class="card">
+      <div class="card-body">
+        <span class="tag amazon">Amazon</span>
+        <h3>Philips Hue White Starter Kit</h3>
+        <p>Bridge + 2 Lampen für das sichtbarste Smart-Home-Upgrade. Stabil, erweiterbar und kompatibel mit Alexa, Apple HomeKit & Google.</p>
+        <div class="price">ab ca. 89,99 €</div>
+        <a class="btn" href="https://www.amazon.de/s?k=philips+hue+white+starter&tag=mrtbuildsmrt-21" target="_blank" rel="noopener">Bei Amazon ansehen</a>
+      </div>
+    </article>
 
-        <section id="licht">
-            <h2>#3 Licht — Das sichtbarste Smart-Home-Upgrade</h2>
-            <div class="card">
-                <h3>Philips Hue Starter Kit (Bridge + 2–4 Bulbs)</h3>
-                <p>
-                    Hue ist das Synonym für smartes Licht. Die Bridge macht das System stabil,
-                    und mit Apple HomeKit, Alexa, Google und SmartThings ist die Kompatibilität
-                    unschlagen. Meine Empfehlung: erst Bridge + 2 White-Bulbs kaufen, dann ausbauen.
-                </p>
-                <div style="margin-top: 1rem;">
-                    <span class="pill">Hue</span>
-                    <span class="pill">Bridge</span>
-                    <span class="pill">Apple HomeKit</span>
-                </div>
-            </div>
-        </section>
+    <article class="card">
+      <div class="card-body">
+        <span class="tag amazon">Amazon</span>
+        <h3>Sonoff Zigbee 3.0 USB Dongle Plus</h3>
+        <p>Das Schweizer Messer für Home Assistant, Zigbee2MQTT und ESPHome. Koordiniere Sensoren und Schalter zuverlässig.</p>
+        <div class="price">ab ca. 19,99 €</div>
+        <a class="btn" href="https://www.amazon.de/s?k=sonoff+zigbee+usb+dongle&tag=mrtbuildsmrt-21" target="_blank" rel="noopener">Bei Amazon ansehen</a>
+      </div>
+    </article>
 
-        <section id="kurs">
-            <h2>Einstiegskurs Smart Home</h2>
-            <div class="card">
-                <h3>Vom Kauf zur fertigen Smart-Home-Steuerung</h3>
-                <p>
-                    Ich baue derzeit einen praxisnahen Einstiegskurs für Smart-Home-Einsteiger auf —
-                    inklusive Produktauswahl, Router-Einstellungen und Sicherheitschecks.
-                    Trag dich hier ein, um informiert zu werden.
-                </p>
-                <p style="margin-top: 0.75rem;">
-                    <a href="#" class="btn btn-primary" onclick="alert('Coming soon!')">Kurs-Updates erhalten</a>
-                </p>
-                <span class="pill">Digistore24</span>
-                <span class="pill">E-Book + Video</span>
-            </div>
-        </section>
+    <article class="card">
+      <div class="card-body">
+        <span class="tag amazon">Amazon</span>
+        <h3>Shelly Plus 1</h3>
+        <p>WLAN-Relais für Unterputz-Montage oder Montage in der Steckdose. Perfekt für Garagentore, Lampen oder Pumpen über Home Assistant.</p>
+        <div class="price">ab ca. 19,99 €</div>
+        <a class="btn" href="https://www.amazon.de/s?k=shelly+plus+1&tag=mrtbuildsmrt-21" target="_blank" rel="noopener">Bei Amazon ansehen</a>
+      </div>
+    </article>
 
-        <div class="disclaimer">
-            <strong>Hinweis:</strong> Einige Links auf dieser Seite sind Affiliate-Links.
-            Wenn du darüber kaufst, erhalte ich eine kleine Provision — ohne Mehrkosten für dich.
-            Das hilft mir, ehrliche Tests zu finanzieren. Meine Bewertungen bleiben davon unabhängig.
-        </div>
-    </main>
+    <article class="card">
+      <div class="card-body">
+        <span class="tag amazon">Amazon</span>
+        <h3>Aqara Temperatur- & Feuchtigkeitssensor</h3>
+        <p>Günstiger Zigbee-Sensor für Raumklima-Monitoring und Automatisierungen — etwa „Lüften, wenn die Luft zu trocken ist“.</p>
+        <div class="price">ab ca. 14,99 €</div>
+        <a class="btn" href="https://www.amazon.de/s?k=aqara+temperatur+feuchtigkeitssensor&tag=mrtbuildsmrt-21" target="_blank" rel="noopener">Bei Amazon ansehen</a>
+      </div>
+    </article>
 
-    <footer>
-        <p>Smart Home für Einsteiger · Autonome Demo · Bis zur echten Monetarisierung</p>
-    </footer>
+    <article class="card">
+      <div class="card-body">
+        <span class="tag amazon">Amazon</span>
+        <h3>ESP32 Starter Kit</h3>
+        <p>Breadboard, Sensoren, LEDs und ein ESP32-Board. Die Basis für eigene smarte Schaltungen und ESPHome-Projekte.</p>
+        <div class="price">ab ca. 24,99 €</div>
+        <a class="btn" href="https://www.amazon.de/s?k=esp32+starter+kit&tag=mrtbuildsmrt-21" target="_blank" rel="noopener">Bei Amazon ansehen</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <span class="tag digital">Digistore24</span>
+        <h3>Pimp your Fire HD Tablet</h3>
+        <p>E-Book und Anleitung, um ein Fire HD Tablet als Smart-Home-Zentrale und Wandpanel vorzubereiten — inklusive Motion Detection.</p>
+        <div class="price">E-Book</div>
+        <a class="btn btn-secondary" href="https://www.digistore24.com/redir/441716/torstenenglerca7c/" target="_blank" rel="noopener">Jetzt ansehen</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <span class="tag digital">Digistore24</span>
+        <h3>KNX Programmierung Stand 2026</h3>
+        <p>8-Stunden-Videokurs mit Klick-Anleitung für ETS5/ETS6. Für Bauherren und Elektriker, die KNX schnell und praxisnah lernen wollen.</p>
+        <div class="price">299,00 €</div>
+        <a class="btn btn-secondary" href="https://www.digistore24.com/redir/282515/torstenenglerca7c/" target="_blank" rel="noopener">Jetzt ansehen</a>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <p>© 2026 mr_t_builds — Torsten Engler · Einige Links sind Affiliate-Links.</p>
+  </footer>
+</div>
 </body>
 </html>
